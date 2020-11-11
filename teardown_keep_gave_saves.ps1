@@ -90,7 +90,7 @@ while ( $null -ne $(Get-Process $process -ErrorAction SilentlyContinue) ) {
                 $image_bytes = [System.IO.File]::ReadAllBytes($save_file.FullName)
                 [System.IO.File]::WriteAllBytes($new_file, $image_bytes)
             } catch {
-                echo "Failed to copy"
+                Write-Output "Failed to copy"
                 continue
             }
 
